@@ -1,0 +1,138 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(50,0,50);
+}
+header {
+    background-color: rgb(40, 167, 34);
+    padding: 1px;
+    margin: -8px -8px 30px -8px;
+    p{
+        color: rgb(60, 0, 117);
+    }
+    
+}
+header blockquote {
+    font-size: large;
+    text-align: center;
+    text-transform: capitalize ;
+    color: white;
+    text-decoration: solid;
+    font-weight: bold;
+}
+.bloque {
+    background-color: white;
+    padding: 5px;
+    margin: 5px 100px 20px 100px;
+    border-radius: 5px;
+}
+.bloque h1 {
+    padding-bottom: 10px;
+    border-bottom: solid black;
+}
+.PropiedadesDeTexto p {
+    text-decoration: underline black;
+    text-transform: capitalize;
+}
+.PropiedadesDeTexto blockquote {
+    background-color: rgb(230,230,230);
+    margin: 0px;
+    border-left: 5px solid rgb(170,170,170);
+    padding: 10px;
+    font-style: italic;
+    color: rgb(130,130,130);
+}
+.caja {
+    padding: 0px 20px 0px 20px;
+    margin-top: 15px;
+    border: 3px solid purple;
+    border-radius: 5px;
+    box-shadow: 2px 2px 1px 1px green;
+}
+.cajaV2 {
+    background-color: purple;
+    border: 5px solid green;
+    color: white;
+}
+.relativo {
+    position: relative;
+    top: 5px;
+    padding: 0px 20px 0px 20px;
+    margin: 15px 0px 40px 0px;
+    border: 3px solid green;
+    border-radius: 5px;
+    background-color: rgb(230,230,230);
+}
+.absoluto {
+    position: absolute;
+    padding: 0px 20px 0px 20px;
+    margin-top: 15px;
+    border: 3px solid green;
+    border-radius: 5px;
+    background-color: rgb(100,0,100);
+    color: white;
+    top: 640px;
+    left: 350px;
+}
+@media screen and (max-width: 768px) {
+    body {
+        background-color: rgb(217, 217, 255);
+        font-size: small;
+    }
+    h1 {
+        font-size: small;
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0px 20px 0px 20px;
+}
+.grid-item {
+    background-color: rgb(150, 0, 150);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+.mover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+.circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    border-radius: 50%;
+}
+
+.circle1 {
+    animation: circle1-motion 5s linear infinite;
+}
+
+.circle2 {
+    animation: circle2-motion 5s linear infinite;
+    background-color: purple;
+}
+
+@keyframes circle1-motion {
+    0% {
+        transform: rotate(0deg) translateX(80px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(80px) rotate(-360deg);
+    }
+}
+
+@keyframes circle2-motion {
+    0% {
+        transform: rotate(180deg) translateX(80px) rotate(180deg);
+    }
+    100% {
+        transform: rotate(540deg) translateX(80px) rotate(-360deg);
+    }
+}
